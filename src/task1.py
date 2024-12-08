@@ -6,6 +6,7 @@ class Bank:
         self._credits_count = credits_count
         self.luck = luck
         self.nick_name = nick_name
+
     def __str__(self):
         return (f"Bank Info:\n"
                 + f'Name: {self._name}\n'
@@ -37,8 +38,10 @@ class Bank:
 
     def set_credits_count(self, credits_count):
         self._credits_count = credits_count
+    
     def __del__(self):
         print("I think I'm done at this point.")
+
 
 def main():
     bank1 = Bank("Lviv", 1000, 50)
@@ -47,6 +50,7 @@ def main():
     for bank in (bank1, bank2, bank3):
         print(repr(bank))
     print()
+
 
 if __name__=='__main__':
     main()
